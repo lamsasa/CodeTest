@@ -1,6 +1,8 @@
 package Sec;
 //알람 설정하기
 
+import java.util.Scanner;
+
 //### [문제]
 //
 //상근이는 매일 아침 알람을 듣고 일어난다. 알람을 듣고 바로 일어나면 다행이겠지만, 항상 조금만 더 자려는 마음 때문에 매일 학교를 지각하고 있다.
@@ -21,4 +23,17 @@ package Sec;
 //
 //첫째 줄에 상근이가 창영이의 방법을 사용할 때, 설정해야 하는 알람 시간을 출력한다. (입력과 같은 형태로 출력하면 된다.)
 public class normal1 {
+    public static void main(String[] args) {
+        int hour, min, calc;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("시간 : ");
+        hour = sc.nextInt();
+        min = sc.nextInt();
+        calc = (hour * 60) + min;
+        if (calc < 45) {
+            calc = (24 * 60) + min;
+        }
+        calc -= 45;
+        System.out.printf("%d %d\n", (calc / 60), (calc % 60));
+    }
 }
