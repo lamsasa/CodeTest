@@ -5,4 +5,7 @@ package Sec;
 //- 참고 : vector 각 요소를 저장한 후 변동이 별로 없는 경우 효과적이고, 추가/삭제가 빈번하게 발생하는 경우는 list가 유리 합니다.
 //- vsctor는 내부적으로는 배열 구조를 가지고 있습니다.
 public class normal3 {
+    public static void main(String[] args) {
+
+    }
 }
