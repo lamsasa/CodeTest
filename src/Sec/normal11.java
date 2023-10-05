@@ -1,6 +1,8 @@
 package Sec;
 //평균 점수
 
+import java.util.Scanner;
+
 //## 문제
 //
 //상현이가 가르치는 아이폰 앱 개발 수업의 수강생은 원섭, 세희, 상근, 숭, 강수이다.
@@ -19,4 +21,16 @@ package Sec;
 //
 //첫째 줄에 학생 5명의 평균 점수를 출력한다.
 public class normal11 {
+    public static void main(String[] args) {
+        int[] score = new int[5];
+        int total = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("점수 입력 : ");
+        for(int i = 0; i < score.length; i++) {
+            score[i] = sc.nextInt();
+            if(score[i] < 40) score[i] = 40;
+            total += score[i];
+        }
+        System.out.println(total/5);
+    }
 }
