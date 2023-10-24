@@ -7,4 +7,7 @@ package Sec;
 //7자리 로또를 인쇄하다
 //배열을 사용해야 합니다.
 public class normal17 {
+    public static void main(String[] args) {
+
+    }
 }
