@@ -1,4 +1,7 @@
 package Third;
+
+import java.util.Scanner;
+
 // 나머지
 // ## 문제
 //
@@ -14,4 +17,19 @@ package Third;
 //
 //첫째 줄에, 42로 나누었을 때, 서로 다른 나머지가 몇 개 있는지 출력한다.
 public class normal1 {
+    public static void main(String[] args) {
+        int[] arr = new int[42];
+        int n;
+        int cnt = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("숫자 10개 입력 : ");
+        for (int i = 0; i < 10; i++) {
+            n = sc.nextInt();
+            arr[n % 42] = 1;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            cnt += arr[i];
+        }
+        System.out.println(cnt);
+    }
 }
