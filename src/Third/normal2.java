@@ -24,5 +24,8 @@ package Third;
 //
 //영식은 Y로, 민식은 M으로 출력한다.
 public class normal2 {
+    public static void main(String[] args) {
+
+    }
 
 }
