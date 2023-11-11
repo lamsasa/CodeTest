@@ -1,4 +1,6 @@
 package Third;
-// 저항
+// 소수의 합 구하기
+
+//
 public class normal5 {
 }
