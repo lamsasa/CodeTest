@@ -19,5 +19,22 @@ package Third;
 //
 //첫 번째 줄에 손익분기점 즉 최초로 이익이 발생하는 판매량을 출력한다. 손익분기점이 존재하지 않으면 -1을 출력한다.
 public class normal5 {
-
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cnt = 0;
+        int fixCost = sc.nextInt();
+        int varCost = sc.nextInt();
+        int sellPrice = sc.nextInt();
+        if (varCost >= sellPrice) {
+            System.out.println("-1");
+            return;
+        }
+        while(true) {
+            // if(fixCost + (varCost * cnt) < sellPrice * cnt) break;
+            if(cnt > fixCost / (sellPrice - varCost)) break;
+            cnt++;
+        }
+        System.out.println(cnt);
+        // System.out.println((fixCost / (sellCost - valCost))+1);
+    }
 }
