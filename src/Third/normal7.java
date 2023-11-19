@@ -1,4 +1,7 @@
 package Third;
+
+import java.util.Scanner;
+
 // PC방 알바
 // ## 문제
 //
@@ -16,4 +19,16 @@ package Third;
 //
 //첫째 줄에 거절당하는 사람의 수를 출력한다.
 public class normal7 {
+    public static void main(String[]args) {
+        int[] pcRoom = new int[100];
+        int cnt = 0, seatNum;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i = 0; i < n; i++) {
+            seatNum = sc.nextInt();
+            if(pcRoom[seatNum-1] == 1) cnt++;
+            else pcRoom[seatNum-1] = 1;
+        }
+        System.out.println(cnt);
+    }
 }
