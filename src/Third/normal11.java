@@ -1,4 +1,7 @@
 package Third;
+
+import java.util.Scanner;
+
 // 단어 공부
 //## 문제
 //
@@ -12,4 +15,24 @@ package Third;
 //
 //첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
 public class normal11 {
+    public static void main(String[] args) {
+        int[] alphabet = new int[26];
+        int max = 0;
+        char result = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("단어 입력 : ");
+        String word = sc.next();
+        for(int i = 0; i < word.length(); i++) {
+            if(word.charAt(i) >= 'a') alphabet[word.charAt(i) - 'a']++;
+            else alphabet[word.charAt(i) - 'A']++;
+        }
+        for(int i = 0; i < alphabet.length; i++) {
+            if(alphabet[i] == max) result = '?';
+            else if(alphabet[i] > max) {
+                max = alphabet[i];
+                result = (char) ('A' + i);
+            }
+        }
+        System.out.println(result);
+    }
 }
