@@ -43,4 +43,3 @@ class Calc_func {
         System.out.println();
     }
     }
-}
