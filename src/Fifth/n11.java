@@ -4,4 +4,7 @@ package Fifth;
 //comapre_num 함수를 사용하여 a,b,c 중 최대값을 찾습니다.
 //최대값을 인쇄합니다.
 public class n11 {
+    public static void main(String[] args) {
+
+    }
 }
