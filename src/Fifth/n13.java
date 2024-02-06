@@ -1,4 +1,7 @@
 package Fifth;
+
+import java.util.Scanner;
+
 // 숫자의 합
 // ## 문제
 //
@@ -12,4 +15,13 @@ package Fifth;
 //
 //입력으로 주어진 숫자 N개의 합을 출력한다.
 public class n13 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String sNum = sc.next();
+        int sum = 0;
+        for(int i = 0; i <sNum.length(); i++) {
+            sum += sNum.charAt(i) - '0';
+        }
+        System.out.println(sum);
+    }
 }
